@@ -1,0 +1,42 @@
+header {
+  padding: 15px 0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+  @media (min-width: 480px) {
+    padding: 20px 0;
+  }
+  @media (min-width: 768px) {
+    padding: 25px 0;
+  }
+}
+.navbar {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #309228;
+    @media (min-width: 480px) {
+      font-size: 20px;
+    }
+  }
+  &__list {
+    font-weight: 600;
+    display: flex;
+    column-gap: 15px;
+    @media (min-width: 480px) {
+      font-size: 18px;
+      column-gap: 20px;
+    }
+  }
+  &__link {
+    text-transform: uppercase;
+    transition: 0.3s all;
+    color: #318a1d;
+    &:hover {
+      color: #68ce51;
+    }
+  }
+}
