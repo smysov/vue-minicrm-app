@@ -6,11 +6,12 @@
 
 body {
   font-family: 'Antikor Text', sans-serif;
-  font-size: 16;
+  font-size: 16px;
   line-height: 1.42;
   font-weight: 300;
   margin: 0;
   padding: 0;
+  background-color: #f6f6f6;
 }
 
 h1,
@@ -54,7 +55,6 @@ section,
   flex-direction: column;
   margin: 0 auto;
   min-height: 100vh;
-  min-width: 100vh;
 
   &__content {
     display: flex;
@@ -67,12 +67,11 @@ section,
 }
 
 .container {
-  width: 100%;
+  max-width: 100%;
   flex: 0 0 auto;
   position: relative;
   padding: 0 10px;
   margin: 0 auto;
-  min-width: 320px;
 
   @media (min-width: 480px) {
     padding: 0 15px;
