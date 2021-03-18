@@ -93,11 +93,11 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader',
-        options: {
-          loader: {
-            scss: 'vue-style-loader!css-loader!sass-loader',
-          },
-        },
+        // options: {
+        //   loader: {
+        //     scss: 'vue-style-loader!css-loader!sass-loader',
+        //   },
+        // },
       },
       {
         test: /\.css$/,
@@ -115,8 +115,12 @@ module.exports = {
       {
         test: /\.s[ac]ss$/,
         use: [
+          'vue-style-loader',
           {
             loader: MiniCssExtractPlugin.loader,
+            options: {
+              esModule: false,
+            },
           },
           'css-loader',
           'postcss-loader',

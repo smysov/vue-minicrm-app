@@ -6,26 +6,23 @@ table {
 }
 
 th {
+  font-family: 'Mint Round', Arial, serif;
+  font-size: 20px;
   font-weight: 700;
+  text-transform: uppercase;
   padding: 5px;
   letter-spacing: 1.2px;
   cursor: pointer;
-
-  @media (min-width: 360px) {
-    text-align: center;
-  }
+  width: 33%;
 
   @media (min-width: 480px) {
-    font-size: 20px;
-  }
-
-  @media (min-width: 768px) {
-    font-size: 22px;
+    font-size: 24px;
   }
 }
 
 td {
-  padding: 20px 2px;
+  font-family: 'Mint Round', Arial, serif;
+  padding: 20px 5px;
   width: 33%;
   text-align: center;
 
@@ -35,7 +32,7 @@ td {
 }
 
 tbody tr {
-  font-size: 8.3px;
+  font-size: 14px;
   font-weight: 600;
   background-color: #ffffff;
   transition: 0.3s linear all;
