@@ -14,7 +14,7 @@
     "stats": "webpack --json > stats.json && webpack-bundle-analyzer stats.json",
     "lint": "eslint src/**/*.{js,vue}",
     "lint:fix": "eslint src/**/*.{js,vue} --fix --color",
-    "prettier": "prettier --write src/**/*.{js,vue,scss}"
+    "prettier": "prettier --write src/**/*.scss"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",

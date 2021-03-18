@@ -52,5 +52,6 @@ module.exports = {
     indent: [
       'error', 2,
     ],
+    'vue/no-side-effects-in-computed-properties': 'off',
   },
 };
