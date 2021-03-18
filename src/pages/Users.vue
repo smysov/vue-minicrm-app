@@ -8,13 +8,13 @@
           <!--Header-->
           <thead>
             <tr>
-              <th>
+              <th @click="sort('name')">
                 <span>Name</span>
               </th>
-              <th>
+              <th @click="sort('email')">
                 <span>Email</span>
               </th>
-              <th>
+              <th @click="sort('phone')">
                 <span>Phone</span>
               </th>
             </tr>
@@ -22,7 +22,7 @@
           <!--Body-->
           <tbody>
             <tr
-              v-for="user of users"
+              v-for="user of usersSort"
               :key="user.id"
             >
               <td>{{ user.name }}</td>
@@ -46,7 +46,24 @@ export default {
     return {
       users: [
       ],
+      currentSort: 'name',
+      currentSortDir: 'asc',
     };
+  },
+  computed: {
+    usersSort() {
+      return this.users.sort((a, b) => {
+        let modification = 1;
+        if (this.currentSortDir === 'desc') modification = -1;
+        if (a[this.currentSort] < b[this.currentSort]) {
+          return -1 * modification;
+        }
+        if (a[this.currentSort] > b[this.currentSort]) {
+          return 1 * modification;
+        }
+        return 0;
+      });
+    },
   },
   created() {
     try {
@@ -62,6 +79,14 @@ export default {
     } catch (error) {
       Promise.reject(error);
     }
+  },
+  methods: {
+    sort(e) {
+      if (e === this.currentSort) {
+        this.currentSortDir = this.currentSortDir === 'asc' ? 'desc' : 'asc';
+      }
+      this.currentSort = e;
+    },
   },
 };
 </script>
