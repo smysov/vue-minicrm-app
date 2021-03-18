@@ -2,10 +2,7 @@ const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
-const OptimizeCssAssetWebpackPlugin = require(`
-optimize-css-assets-webpack-plugin
-`);
+const OptimizeCssWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const { VueLoaderPlugin } = require('vue-loader');
@@ -14,9 +11,7 @@ const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
 
 const filename = (ext) => {
-  return (isDev ? `
-    [name].${ext}` : `[name].[contenthash:8].${ext}`
-  );
+  return isDev ? `[name].${ext}` : `[name].[contenthash:8].${ext}`;
 };
 
 const optimization = () => {
@@ -28,7 +23,8 @@ const optimization = () => {
 
   if (isProd) {
     config.minimizer = [
-      new OptimizeCssAssetWebpackPlugin(), new TerserWebpackPlugin(),
+      new OptimizeCssWebpackPlugin(),
+      new TerserWebpackPlugin(),
     ];
   }
   return config;
