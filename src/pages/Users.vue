@@ -142,29 +142,21 @@ export default {
     }
 
     &::before {
-      top: 0;
-      right: -19px;
+      top: -1px;
+      right: -20px;
 
       @media (min-width: 480px) {
         top: 2px;
       }
-
-      @media (min-width: 768px) {
-        top: 3px;
-      }
     }
 
     &::after {
-      top: -3px;
-      right: -24px;
+      top: -4px;
+      right: -14px;
       transform: rotate(180deg);
 
       @media (min-width: 480px) {
-        top: -1px;
-      }
-
-      @media (min-width: 768px) {
-        top: 0;
+        top: -3px;
       }
     }
   }
