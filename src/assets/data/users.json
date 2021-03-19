@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Jack",
+    "age": 22,
+    "phone": 2442555
+  },
+  {
+    "id": 2,
+    "name": "Alex",
+    "age": 30,
+    "phone": 2368892
+  },
+  {
+    "id": 3,
+    "name": "John",
+    "age": 32,
+    "phone": 89170658891
+  },
+  {
+    "id": 4,
+    "name": "Sara",
+    "age": 21,
+    "phone": 495639520
+  },
+  {
+    "id": 5,
+    "name": "Monika",
+    "age": 36,
+    "phone": 5788899
+  },
+  {
+    "id": 6,
+    "name": "Julia",
+    "age": 43,
+    "phone": 89379654412
+  },
+  {
+    "id": 7,
+    "name": "Ethan",
+    "age": 22,
+    "phone": 258823
+  },
+  {
+    "id": 8,
+    "name": "Aimee",
+    "age": 39,
+    "phone": 88003000500
+  },
+  {
+    "id": 9,
+    "name": "Emily",
+    "age": 26,
+    "phone": 2456699
+  },
+  {
+    "id": 10,
+    "name": "Donna",
+    "age": 31,
+    "phone": 896036548520
+  },
+  {
+    "id": 11,
+    "name": "Jasmine",
+    "age": 18,
+    "phone": 2468836
+  },
+  {
+    "id": 12,
+    "name": "Mason",
+    "age": 28,
+    "phone": 89276543301
+  }
+]
