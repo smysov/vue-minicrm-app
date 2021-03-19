@@ -29,6 +29,8 @@ The application implements:
 
 </p>
 
+# [View a demo](https://mini-crm-9f808.web.app/)
+
 ---
 
 ## Installation
