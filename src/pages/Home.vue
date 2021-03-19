@@ -12,7 +12,7 @@
           <div class="information__wrapper-image">
             <img
               class="information__image"
-              src="/assets/images/intro.jpg"
+              src="../assets/images/intro.jpg"
               alt="New collection"
             />
           </div>
