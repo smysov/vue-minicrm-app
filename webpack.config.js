@@ -1,5 +1,6 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssWebpackPlugin = require('optimize-css-assets-webpack-plugin');
@@ -44,6 +45,14 @@ const plugins = () => {
     new MiniCssExtractPlugin({
       filename: filename('css'),
     }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, 'src/assets/data'),
+          to: path.resolve(__dirname, 'dist/assets/data'),
+        },
+      ],
+    }),
   ];
 
   if (isProd) {
@@ -59,7 +68,8 @@ module.exports = {
   mode: 'development',
   entry: {
     main: [
-      '@babel/polyfill', './index.js',
+      '@babel/polyfill',
+      './index.js',
     ],
   },
   output: {
@@ -69,7 +79,7 @@ module.exports = {
   },
   resolve: {
     extensions: [
-      '.js', '.scss', '.vue',
+      '.js', '.scss', '.vue', '.json',
     ],
     alias: {
       '@': path.resolve(__dirname, 'src'),
@@ -85,7 +95,6 @@ module.exports = {
       warnings: true,
       errors: true,
     },
-    contentBase: path.join(__dirname, 'src'),
   },
   devtool: isDev ? 'source-map' : false,
   plugins: plugins(),
@@ -94,11 +103,6 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader',
-        // options: {
-        //   loader: {
-        //     scss: 'vue-style-loader!css-loader!sass-loader',
-        //   },
-        // },
       },
       {
         test: /\.css$/,
