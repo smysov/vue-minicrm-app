@@ -32,26 +32,18 @@ td {
 }
 
 tbody tr {
-  font-size: 14px;
   font-weight: 600;
   background-color: #ffffff;
   transition: 0.3s linear all;
   box-shadow: 0 30px 30px rgba(0, 0, 0, 0.02);
 
-  @media (min-width: 420px) {
-    font-size: 10px;
-  }
 
   @media (min-width: 480px) {
-    font-size: 12px;
-  }
-
-  @media (min-width: 660px) {
-    font-size: 15px;
+    font-size: 20px;
   }
 
   @media (min-width: 768px) {
-    font-size: 18px;
+    font-size: 22px;
   }
 
   &:hover {

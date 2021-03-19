@@ -85,6 +85,7 @@ module.exports = {
       warnings: true,
       errors: true,
     },
+    contentBase: path.join(__dirname, 'src'),
   },
   devtool: isDev ? 'source-map' : false,
   plugins: plugins(),

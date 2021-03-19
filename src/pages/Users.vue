@@ -13,8 +13,8 @@
                 <th @click="sort('name')">
                   <span>Name</span>
                 </th>
-                <th @click="sort('email')">
-                  <span>Email</span>
+                <th @click="sort('age')">
+                  <span>Age</span>
                 </th>
                 <th @click="sort('phone')">
                   <span>Phone</span>
@@ -28,17 +28,17 @@
                 :key="user.id"
               >
                 <td>{{ user.name }}</td>
-                <td>{{ user.email }}</td>
+                <td>{{ user.age }}</td>
                 <td>{{ user.phone }}</td>
               </tr>
             </tbody>
           </table>
           <div class="pagination">
             <button @click="prevPage">
-              &larr;
+              Prev
             </button>
             <button @click="nextPage">
-              &rarr;
+              Next
             </button>
           </div>
         </template>
@@ -93,7 +93,7 @@ export default {
     try {
       const response = await axios.get(
         `
-      https://jsonplaceholder.typicode.com/users
+      ./assets/data/users.json
       `,
       );
       this.users = response.data;
